@@ -43,6 +43,6 @@ class ProfileControllerTest extends WebTestCase
     public function testNotAuthenticated(): void
     {
         $this->client->request('GET', '/profile');
-        $this->assertEquals(401, $this->client->getResponse()->getStatusCode());
+        $this->assertTrue($this->client->getResponse()->isRedirect('http://localhost/login'));
     }
 }
