@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="{{ path('app_proposal_post') }}">Post a new</a>
+    {% for proposal in proposals %}
+    <div class="proposal">
+        <h2><a href="{{ path('app_proposal_show', {id: proposal.id}) }}">{{ proposal.title }}</a></h2>
+        <p>{{ proposal.body|nl2br }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}

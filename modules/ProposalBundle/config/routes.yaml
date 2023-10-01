@@ -1,0 +1,5 @@
+controllers:
+  resource:
+    path: ../src/Controller/
+    namespace: ProposalBundle\Controller
+  type: attribute

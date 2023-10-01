@@ -1,0 +1,14 @@
+services:
+  ProposalBundle\Controller\ProposalController:
+    tags:
+      - { name: 'container.service_subscriber' }
+      - { name: 'controller.service_arguments' }
+    calls:
+      - method: setContainer
+        arguments: [ '@Psr\Container\ContainerInterface' ]
+
+  ProposalBundle\Command\SelectProposalCommand:
+    arguments:
+      - '@doctrine.orm.entity_manager'
+    tags:
+      - { name: 'console.command' }

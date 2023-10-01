@@ -20,6 +20,10 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Entity'
                 prefix: 'App\Entity'
                 alias: App
+            ProposalBundle:
+                is_bundle: true
+                prefix: 'ProposalBundle\Entity'
+                alias: ProposalBundle
 
 when@test:
     doctrine:

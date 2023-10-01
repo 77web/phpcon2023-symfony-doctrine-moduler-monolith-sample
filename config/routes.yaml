@@ -3,3 +3,6 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+proposal_bundle_controllers:
+    resource: '@ProposalBundle/config/routes.yaml'

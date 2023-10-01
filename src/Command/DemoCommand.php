@@ -6,6 +6,7 @@ namespace App\Command;
 
 use App\Entity\User;
 use Doctrine\ORM\EntityManagerInterface;
+use ProposalBundle\Entity\Proposal;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -35,6 +36,12 @@ class DemoCommand extends Command
         $user2->setRoles(['ROLE_USER']);
         $user2->setPassword($this->hasherFactory->getPasswordHasher($user2)->hash('password2'));
         $this->em->persist($user2);
+
+        $proposalByUser1 = new Proposal();
+        $proposalByUser1->setUser($user1);
+        $proposalByUser1->setTitle('test proposal');
+        $proposalByUser1->setBody(implode(PHP_EOL, ['This is the first line of proposal.', 'To be continued to this second line.']));
+        $this->em->persist($proposalByUser1);
 
         $this->em->flush();
 
