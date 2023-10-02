@@ -12,6 +12,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\PasswordHasher\Hasher\PasswordHasherFactoryInterface;
+use TicketBundle\Entity\Ticket;
 
 #[AsCommand("app:demo")]
 class DemoCommand extends Command
@@ -42,6 +43,11 @@ class DemoCommand extends Command
         $proposalByUser1->setTitle('test proposal');
         $proposalByUser1->setBody(implode(PHP_EOL, ['This is the first line of proposal.', 'To be continued to this second line.']));
         $this->em->persist($proposalByUser1);
+
+        $ticket = new Ticket();
+        $ticket->setName('limited ticket');
+        $ticket->setPrice(3000);
+        $this->em->persist($ticket);
 
         $this->em->flush();
 

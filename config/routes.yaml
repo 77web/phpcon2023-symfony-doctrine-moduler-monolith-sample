@@ -6,3 +6,6 @@ controllers:
 
 proposal_bundle_controllers:
     resource: '@ProposalBundle/config/routes.yaml'
+
+ticket_bundle_controllers:
+    resource: '@TicketBundle/config/routes.yaml'

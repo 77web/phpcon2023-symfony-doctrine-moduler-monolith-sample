@@ -24,6 +24,9 @@
         <testsuite name="ProposalBundle Test Suite">
             <directory>modules/ProposalBundle/tests</directory>
         </testsuite>
+        <testsuite name="TicketBundle Test Suite">
+            <directory>modules/TicketBundle/tests</directory>
+        </testsuite>
     </testsuites>
 
     <coverage processUncoveredFiles="true">

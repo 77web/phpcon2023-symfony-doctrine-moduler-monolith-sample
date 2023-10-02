@@ -24,6 +24,10 @@ doctrine:
                 is_bundle: true
                 prefix: 'ProposalBundle\Entity'
                 alias: ProposalBundle
+            TicketBundle:
+                is_bundle: true
+                prefix: 'TicketBundle\Entity'
+                alias: TicketBundle
 
 when@test:
     doctrine:

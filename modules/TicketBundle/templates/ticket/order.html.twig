@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Order ticket: {{ ticket.name }}</h1>
+    <form action="{{ path('app_ticket_order', {id: ticket.id}) }}" method="post">
+        <input type="hidden" name="_order_token" value="{{ csrf_token('_order_token') }}" />
+        <button type="submit">Order</button>
+    </form>
+{% endblock %}

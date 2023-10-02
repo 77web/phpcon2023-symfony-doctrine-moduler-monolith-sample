@@ -1,0 +1,18 @@
+services:
+  TicketBundle\Controller\TicketController:
+    tags:
+      - { name: 'container.service_subscriber' }
+      - { name: 'controller.service_arguments' }
+    calls:
+      - method: setContainer
+        arguments: [ '@Psr\Container\ContainerInterface' ]
+
+  TicketBundle\Service\OrderUseCase:
+    arguments:
+      $mailer: '@mailer'
+      $speakerSpecification: '@TicketBundle\Service\SpeakerSpecification'
+      $adminEmail: '%ticket.order_email_from%'
+
+  TicketBundle\Service\SpeakerSpecification:
+    arguments:
+      $em: '@doctrine.orm.entity_manager'

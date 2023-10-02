@@ -12,4 +12,5 @@ return [
     Zenstruck\Foundry\ZenstruckFoundryBundle::class => ['dev' => true, 'test' => true],
     Symfony\Bundle\MonologBundle\MonologBundle::class => ['all' => true],
     ProposalBundle\ProposalBundle::class => ['all' => true],
+    TicketBundle\TicketBundle::class => ['all' => true],
 ];

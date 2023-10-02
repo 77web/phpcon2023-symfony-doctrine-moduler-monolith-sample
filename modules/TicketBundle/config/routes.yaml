@@ -1,0 +1,5 @@
+controllers:
+  resource:
+    path: ../src/Controller/
+    namespace: TicketBundle\Controller
+  type: attribute

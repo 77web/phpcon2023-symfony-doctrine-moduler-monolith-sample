@@ -1,0 +1,2 @@
+ticket:
+  order_email_from: '%env(MAIL_FROM)%'
