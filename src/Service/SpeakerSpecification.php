@@ -2,13 +2,14 @@
 
 declare(strict_types=1);
 
-namespace TicketBundle\Service;
+namespace App\Service;
 
 use App\Entity\User;
 use Doctrine\ORM\EntityManagerInterface;
 use ProposalBundle\Entity\Proposal;
+use TicketBundle\Service\SpeakerSpecificationInterface;
 
-class SpeakerSpecification
+class SpeakerSpecification implements SpeakerSpecificationInterface
 {
     public function __construct(
         private readonly EntityManagerInterface $em,

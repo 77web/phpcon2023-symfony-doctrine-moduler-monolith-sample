@@ -14,7 +14,7 @@ class OrderUseCase
 {
     public function __construct(
         private readonly MailerInterface $mailer,
-        private readonly SpeakerSpecification $speakerSpecification,
+        private readonly SpeakerSpecificationInterface $speakerSpecification,
         private readonly string $adminEmail,
     ) {
     }
