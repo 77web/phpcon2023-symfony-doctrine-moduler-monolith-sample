@@ -10,9 +10,7 @@ services:
   TicketBundle\Service\OrderUseCase:
     arguments:
       $mailer: '@mailer'
-      $speakerSpecification: '@TicketBundle\Service\SpeakerSpecification'
+      $speakerSpecification: '@TicketBundle\Service\SpeakerSpecificationInterface'
       $adminEmail: '%ticket.order_email_from%'
 
-  TicketBundle\Service\SpeakerSpecification:
-    arguments:
-      $em: '@doctrine.orm.entity_manager'
+  TicketBundle\Service\SpeakerSpecificationInterface: ~
