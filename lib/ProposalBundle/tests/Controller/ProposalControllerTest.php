@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ProposalBundle\Tests\Controller;
+namespace lib\ProposalBundle\tests\Controller;
 
 use App\Entity\User;
 use Doctrine\ORM\EntityManagerInterface;

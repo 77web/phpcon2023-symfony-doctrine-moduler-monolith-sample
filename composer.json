@@ -37,14 +37,12 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/",
-            "ProposalBundle\\": "modules/ProposalBundle/src/",
             "TicketBundle\\": "modules/TicketBundle/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "App\\Tests\\": "tests/",
-            "ProposalBundle\\Tests\\": "modules/ProposalBundle/tests/",
             "TicketBundle\\Tests\\": "modules/TicketBundle/tests/"
         }
     },
