@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "435477bac6b4f3f32b10aa898bc70263",
+    "content-hash": "9099274b5d4b078733127a54b462e35c",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -1487,6 +1487,27 @@
                 }
             ],
             "time": "2023-06-21T08:46:11+00:00"
+        },
+        {
+            "name": "myapp/common",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./lib/Common",
+                "reference": "d7f5ec2f25da2d5d015f8ea61d87a63129a7a894"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MyApp\\Common\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "psr/cache",
@@ -8462,7 +8483,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "myapp/common": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
