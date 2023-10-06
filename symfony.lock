@@ -26,6 +26,9 @@
             "migrations/.gitignore"
         ]
     },
+    "myapp/proposal-bundle": {
+        "version": "dev-main"
+    },
     "phpunit/phpunit": {
         "version": "9.6",
         "recipe": {
