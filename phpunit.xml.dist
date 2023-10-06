@@ -22,7 +22,7 @@
             <directory>tests</directory>
         </testsuite>
         <testsuite name="ProposalBundle Test Suite">
-            <directory>modules/ProposalBundle/tests</directory>
+            <directory>lib/ProposalBundle/tests</directory>
         </testsuite>
         <testsuite name="TicketBundle Test Suite">
             <directory>modules/TicketBundle/tests</directory>
