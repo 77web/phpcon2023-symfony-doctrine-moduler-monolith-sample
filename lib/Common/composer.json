@@ -1,0 +1,11 @@
+{
+    "name": "myapp/common",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MyApp\\Common\\": "src/"
+        }
+    },
+    "require": {}
+}
