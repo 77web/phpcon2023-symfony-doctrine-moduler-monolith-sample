@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace ProposalBundle\Entity;
 
-use App\Entity\User;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -24,9 +23,9 @@ class Proposal
     #[Assert\NotBlank]
     private string $body;
 
-    #[ORM\ManyToOne(targetEntity: User::class)]
+    #[ORM\ManyToOne(targetEntity: ProposalOwnerInterface::class)]
     #[ORM\JoinColumn(onDelete: 'cascade')]
-    private User $user;
+    private ProposalOwnerInterface $user;
 
     #[ORM\Column(type: 'boolean')]
     private bool $selected = false;
@@ -61,12 +60,12 @@ class Proposal
         $this->body = $body;
     }
 
-    public function getUser(): User
+    public function getUser(): ProposalOwnerInterface
     {
         return $this->user;
     }
 
-    public function setUser(User $user): void
+    public function setUser(ProposalOwnerInterface $user): void
     {
         $this->user = $user;
     }

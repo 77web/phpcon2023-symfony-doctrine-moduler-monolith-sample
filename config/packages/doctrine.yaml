@@ -28,6 +28,9 @@ doctrine:
                 is_bundle: true
                 prefix: 'TicketBundle\Entity'
                 alias: TicketBundle
+        resolve_target_entities:
+            ProposalBundle\Entity\ProposalOwnerInterface: App\Entity\User
+
 
 when@test:
     doctrine:
